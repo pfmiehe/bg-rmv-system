@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Tahoma, sans-serif; 
+  color: #4A3A67;
+}
+
+.upload-section, .image-section {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button, .custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #fa7c7c;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+}
+
+button:hover, .custom-file-upload:hover {
+  background-color: #fa7c7c;
+}
+
+button:focus, .custom-file-upload:focus {
+  outline: none;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  max-width: 80%;
+  margin: 0 auto; 
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+h1, h2, h3 {
+  font-size: 24px;
+  color: #4A3A67; 
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  font-family: Tahoma, sans-serif;
+}
+
+.styled-button {
+  font-size: 16px;
+  padding: 15px 30px;
+  background-color: #fa7c7c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background-color: #fa7c7c;
+}
+
+.styled-button:focus {
+  outline: none;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

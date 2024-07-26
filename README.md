@@ -17,7 +17,7 @@ git clone https://github.com/pfmiehe/bg-rmv-system.git
 
 ## Instalar dependências do front-end
 1. Entrar na pasta frontend via terminal
-2. Executar o comando: npm install
+2. Executar o comando: `npm install`
 
 
 ## Ambiente virtual Python

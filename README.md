@@ -12,7 +12,7 @@ Esse projeto consiste em uma aplicação web que permite fazer upload de imagens
 ### Clonando o Repositório
 
 ```bash
-git clone https://github.com/pfmiehe/background-remover.git
+git clone https://github.com/pfmiehe/bg-rmv-system.git
 ```
 
 ## Instalar dependências do front-end

@@ -25,9 +25,9 @@ git clone https://github.com/pfmiehe/bg-rmv-system.git
 2. criar um ambiente virtual
 3. ativar o ambiente virtual
 
-- (Passo 2) python3 -m venv venv
-- (Passo 3) source venv/bin/activate (MacOS)
-- (Passo 3) venv\Scripts\activate (Windows)
+- (Passo 2) `python3 -m venv venv`
+- (Passo 3) `source venv/bin/activate` (MacOS)
+- (Passo 3) `venv\Scripts\activate` (Windows)
 
 ### Instalar as dependências do back-end
 pip install -r requirements.txt

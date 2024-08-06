@@ -1,4 +1,4 @@
-# Sistema de Remoção e Centralização de Imagens
+# Sistema de Remoção de Fundo de Imagem e Centralização da Visualização
 
 Esse projeto consiste em uma aplicação web que permite fazer upload de imagens, remover a cor de fundo e encontrar o "centro visual" da imagem. A aplicação é composta por um front-end em React e um back-end em Flask (Python).
 

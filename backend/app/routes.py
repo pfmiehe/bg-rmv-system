@@ -62,28 +62,17 @@ def process_image():
     image = cv2.imread(file_path, cv2.IMREAD_UNCHANGED)
     if image is None:
         return jsonify(error='Image not found'), 404
-    
-    # Garantir que a imagem tem 4 canais
-    if image.shape[2] == 4:
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2BGRA)
 
     # Aplicar SelfiSegmentation para remover o background
-    img_no_bg = segmentor.removeBG(image, (0, 255, 0))
-
-    # Converter a imagem para RGBA 
-    img_no_bg = cv2.cvtColor(img_no_bg, cv2.COLOR_BGR2BGRA)
+    img_no_bg = segmentor.removeBG(image, (0, 255, 0), cutThreshold=0.50)
 
     # Criar máscara para background verde
-    lower_green = np.array([0, 255, 0, 255])
-    upper_green = np.array([0, 255, 0, 255])
+    lower_green = np.array([0, 240, 0])
+    upper_green = np.array([10, 255, 10])
+    print("lower_green: ", lower_green)
+    print("upper_green: ", upper_green)
     green_mask = cv2.inRange(img_no_bg, lower_green, upper_green)
-
-    # Setar áreas verdes para transparente
-    kernel = np.ones((3, 3), np.uint8)
-    green_mask = cv2.morphologyEx(green_mask, cv2.MORPH_OPEN, kernel, iterations=2)
-    green_mask = cv2.morphologyEx(green_mask, cv2.MORPH_DILATE, kernel, iterations=1)
-
-    img_no_bg[green_mask == 255] = (0, 0, 0, 0)
+    img_no_bg[green_mask == 255] = (0, 0, 0)
  
     # Salvar imagem processada
     processed_path = os.path.join(processed_folder, f'processed_{filename}')

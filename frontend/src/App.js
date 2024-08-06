@@ -89,6 +89,7 @@ function App() {
     try {
       const response = await axios.post('http://127.0.0.1:5000/process', { points, imageUrl: processedImageUrl });
       const filename = response.data.filename;
+      console.log("depurar App.js", response)
       setProcessedImageUrl(`http://127.0.0.1:5000/processed/${filename}`);
       setPoints([]);
     } catch (error) {
